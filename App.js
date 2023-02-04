@@ -5,6 +5,8 @@ import { Themes } from "./assets/Themes";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Footer } from "./app/components";
+import Header from "./app/components/header";
+import Body from "./app/components/body"
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 
@@ -19,20 +21,8 @@ function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text
-        style={{
-          fontFamily: "Sydney", // test to see if the font is loaded, feel free to remove this
-        }}
-      >
-        Open up App.js to start working on your app!
-      </Text>
-      <Text
-        style={{
-          fontFamily: "Sydney-Bold", // test to see if the font is loaded, feel free to remove this
-        }}
-      >
-        ~Good luck~
-      </Text>
+      <Header/>
+      <Body/>
     </View>
   );
 }
@@ -75,7 +65,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
   },

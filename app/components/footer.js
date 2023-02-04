@@ -8,15 +8,15 @@ export default function Footer() {
   return (
     <View style={styles.navigationContainer}>
       <View style={styles.iconContainer}>
-        <Image source={Icons.discover.light} style={[styles.icon, styles.discoverIcon]} />
+        <Image source={Icons.discover.dark} style={[styles.icon, styles.discoverIcon]} />
         <Text style={styles.navigationText}>Discover</Text>
       </View>
       <View style={[styles.iconContainer, { marginBottom: '1.5%', marginLeft: '-4%' }]}>
-        <Image source={Icons.heart.light} style={[styles.icon, styles.matchesIcon]} />
+        <Image source={Icons.heart.dark} style={[styles.icon, styles.matchesIcon]} />
         <Text style={styles.navigationText}>Matches</Text>
       </View>
       <View style={styles.iconContainer}>
-        <Image source={Icons.messages.light} style={[styles.icon, styles.messagesIcon]} />
+        <Image source={Icons.messages.dark} style={[styles.icon, styles.messagesIcon]} />
         <Text style={styles.navigationText}>DMs</Text>
       </View>
     </View>
@@ -26,16 +26,18 @@ export default function Footer() {
 const styles = StyleSheet.create({
   navigationContainer: {
     flexDirection: 'row',
-    backgroundColor: Themes.light.navigation,
+    backgroundColor: 'white',
     alignItems: 'baseline',
     justifyContent: 'space-around',
     width: width,
     height: height * 0.1,
+    color: 'white'
   },
   iconContainer: {
     justifyContent: 'center',
     alignItems: 'center',
     padding: '2%',
+    color: 'black'
   },
   icon: {
     height: height * 0.05,
@@ -48,6 +50,6 @@ const styles = StyleSheet.create({
   navigationText: {
     fontFamily: 'Sydney',
     fontSize: PixelRatio.getFontScale() * height * 0.02,
-    color: Themes.light.textSecondary,
+    color: 'black'
   },
 });
